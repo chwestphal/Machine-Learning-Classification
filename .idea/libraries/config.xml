@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="config">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Downloads/mikiobraun-jblas-6886f22/INSTALL" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/mikiobraun-jblas-6886f22/config" />
+      <root url="file://$USER_HOME$/Downloads/mikiobraun-jblas-6886f22/src/main/java" />
+      <root url="file://$USER_HOME$/Downloads/mikiobraun-jblas-6886f22/src/test/java" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Downloads/mikiobraun-jblas-6886f22/INSTALL" recursive="false" />
+  </library>
+</component>

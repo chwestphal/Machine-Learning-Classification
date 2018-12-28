@@ -1,0 +1,50 @@
+// plugins for Gradle
+plugins {
+	id 'java'
+	id 'eclipse'
+	id 'idea'
+}
+
+// character encoding
+tasks.withType(AbstractCompile)*.options*.encoding = "UTF-8"
+
+// Java version compliance
+sourceCompatibility = targetCompatibility = 1.8
+
+// where to get the dependencies
+repositories {
+    mavenCentral()
+    maven {
+		url 'http://maven.visual-computing.com/'
+	}	
+}
+
+// dependencies of the project
+dependencies {
+	// https://mvnrepository.com/artifact/org.jblas/jblas
+	compile group: 'de.htw.lcs', name: 'octave', version: '1.0.0'	// Octave bridge		
+	compile group: 'org.jblas', name: 'jblas', version: '1.2.4'		// JBLAS for matrix pperations
+	testCompile 'junit:junit:4.+';									// jUnit for unit tests
+}
+
+/**
+ * creates the gradlew.bat and gradlew.sh file
+ */
+task wrapper(type: Wrapper) {
+    gradleVersion = "3.5.1";
+	distributionUrl = "https://services.gradle.org/distributions/gradle-3.5.1-all.zip";	
+}
+
+// imports like in Java
+import java.util.concurrent.atomic.AtomicInteger;
+
+task helloWorld {
+
+	// Groovy 
+	def text = 'Hallo Welt!';
+	println text;
+	
+	// or Java
+	AtomicInteger ai = new AtomicInteger(5);
+    System.out.println("Nummer "+ai+" lebt.");
+}
